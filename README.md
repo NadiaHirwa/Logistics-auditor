@@ -116,7 +116,7 @@ Please edit this `README.md` file in your forked repository to include the follo
 
 ### B. Project Links
 
-- **Link to Notebook:** (e.g., Google Colab, etc.). _Ensure sharing permissions are set to "Anyone with the link can view"._
+- **Link to Notebook:** [(e.g., Google Colab, etc.). _Ensure sharing permissions are set to "Anyone with the link can view"._](https://colab.research.google.com/drive/1cmZ6VKy09s_hesdEN_Q_v3RFWZdw8pwB?usp=sharing)
 - **Link to Dashboard:** (e.g., Tableau Public, etc.).
 - **Link to Presentation:** A link to a short slide deck (PDF/PPT) AND (Optional) a 2-minute video walkthrough (YouTube) explaining your results.
 
