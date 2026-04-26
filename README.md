@@ -15,9 +15,9 @@ Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce dataset 
 
 | Deliverable | Link |
 |---|---|
-| 📓 Notebook (Google Colab) | https://colab.research.google.com/drive/1cmZ6VKy09s_hesdEN_Q_v3RFWZdw8pwB?usp=sharing |
-| 📊 Dashboard (Looker Studio) | *[Add your Looker Studio link here]* |
-| 📑 Presentation | *[Add your presentation link here]* |
+| Notebook (Google Colab) | https://colab.research.google.com/drive/1cmZ6VKy09s_hesdEN_Q_v3RFWZdw8pwB?usp=sharing |
+| Dashboard (Looker Studio) | https://datastudio.google.com/reporting/e6cc3feb-c04e-4cd3-83dd-76e13734d7a5 |
+| 📑 Presentation | https://docs.google.com/presentation/d/e/2PACX-1vTOsNeYUek8slwxN6osWNpo-Avt6mJjVJbJ6qTOfgCxnpEedyVK54q7DAGnIU9ovPlqR1j0qeli6nsa/pub?start=false&loop=false&delayms=5000 |
 
 ---
 

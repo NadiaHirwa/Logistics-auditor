@@ -8,5 +8,11 @@ __pycache__/
 *.pyc
 .env
 
+# Quarto
+*.pdf
+*.qmd
+
 # System
 .DS_Store
+_site/
+.quarto/
