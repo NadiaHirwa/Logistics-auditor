@@ -1,13 +1,13 @@
-# 🚚 The "Last Mile" Logistics Auditor
+# The "Last Mile" Logistics Auditor
 **Client:** Veridi Logistics (Global E-Commerce Aggregator)  
 **Analyst:** Nadia Iradukunda Hirwa  
-**Track:** Data Engineering — AmaliTech Apprenticeship Challenge  
+**Track:** Data Engineering — AmaliTech Apprenticeship Challenge (July 2026)
 
 ---
 
 ## A. Executive Summary
 
-Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce dataset reveals that 6.77% of deliveries arrived late, with a direct and measurable impact on customer satisfaction. On-time deliveries average 4.29 stars while super-late deliveries collapse to 1.74 stars — a 2.55-point drop that proves logistics performance is the primary driver of negative reviews. The problem is not nationwide: it is concentrated in northeastern states, with Alagoas (AL) recording the highest late rate at 21.41% and São Paulo (SP) carrying the highest absolute volume of late orders at 1,820. A two-pronged intervention targeting AL (process fix) and SP (scale fix) would deliver the highest customer satisfaction improvement per dollar invested.
+Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce dataset reveals that 6.77% of deliveries arrived late, with a direct and measurable impact on customer satisfaction. On-time deliveries average 4.29 stars while super-late deliveries collapse to 1.74 stars — a 2.55-point drop that proves logistics performance is the primary driver of negative reviews. The problem is not nationwide: it is concentrated in northeastern states, with Alagoas (AL) recording the highest late rate at 21.41% and São Paulo (SP) carrying the highest absolute volume of late orders at 1,820. A two-pronged intervention targeting Alagoas (process fix) and São Paulo (scale fix) would deliver the highest customer satisfaction improvement per dollar invested.
 
 ---
 
@@ -15,9 +15,8 @@ Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce dataset 
 
 | Deliverable | Link |
 |---|---|
-| Notebook (Google Colab) | https://colab.research.google.com/drive/1cmZ6VKy09s_hesdEN_Q_v3RFWZdw8pwB?usp=sharing |
-| Dashboard (Looker Studio) | https://datastudio.google.com/reporting/e6cc3feb-c04e-4cd3-83dd-76e13734d7a5 |
-| 📑 Presentation | https://docs.google.com/presentation/d/e/2PACX-1vTOsNeYUek8slwxN6osWNpo-Avt6mJjVJbJ6qTOfgCxnpEedyVK54q7DAGnIU9ovPlqR1j0qeli6nsa/pub?start=false&loop=false&delayms=5000 |
+| Dashboard (Looker Studio) | [View Dashboard](https://datastudio.google.com/reporting/e6cc3feb-c04e-4cd3-83dd-76e13734d7a5) |
+| Presentation (Google Slides) | [View Presentation](https://docs.google.com/presentation/d/e/2PACX-1vTOsNeYUek8slwxN6osWNpo-Avt6mJjVJbJ6qTOfgCxnpEedyVK54q7DAGnIU9ovPlqR1j0qeli6nsa/pub?start=false&loop=false&delayms=5000) |
 
 ---
 
@@ -36,12 +35,11 @@ Analysis of 96,470 delivered orders from the Olist Brazilian e-commerce dataset 
 - Classification: **On Time** (≤ 0 days), **Late** (1–5 days), **Super Late** (> 5 days)
 
 ### Candidate's Choice — Business Risk Score
-I added a **Risk Score** combining late delivery rate with order volume per state using the formula:  
-`Risk Score = late_pct × log(1 + total_orders)`  
+I added a **Risk Score** combining late delivery rate with order volume per state:
 
-**Why:** A state with a 20% late rate but only 50 orders is less critical than a state with 12% late rate and 12,000 orders. The risk score surfaces states where fixing the problem will have maximum customer impact. This gives the CEO a prioritized action list — not just a ranked list of bad rates.
+**Why:** A state with a 20% late rate but only 50 orders is less critical than a state with 12% late rate and 12,000 orders. The risk score surfaces states where fixing the problem will have maximum customer impact — giving the CEO a prioritized action list, not just a ranked list of bad rates.
 
-This analysis revealed that while **AL** has the worst late rate (21.41%), **SP and RJ** represent the highest business risk due to their combination of high volume and elevated late rates.
+This revealed that while **Alagoas** has the worst late rate (21.41%), **São Paulo and Rio de Janeiro** represent the highest business risk due to their combination of high volume and elevated late rates.
 
 ---
 
@@ -54,26 +52,27 @@ This analysis revealed that while **AL** has the worst late rate (21.41%), **SP 
 | Story 3 | The Geographic Heatmap | ✅ Complete |
 | Story 4 | The Sentiment Correlation | ✅ Complete |
 | Bonus | The "Translation" Challenge | ✅ Complete |
-| Extra | Candidate's Choice — Risk Score Analysis | ✅ Complete |
+| Extra | Candidate's Choice — Business Risk Score | ✅ Complete |
 
 ---
 
 ## E. Key Findings
 
 - **6.77%** of delivered orders arrived late
-- **AL** has the worst late rate: **21.41%**
-- **SP** has the most customers affected: **1,820 late orders**
+- **Alagoas** has the worst late rate: **21.41%**
+- **São Paulo** has the most customers affected: **1,820 late orders**
 - On Time → **4.29 ⭐** | Late → **2.99 ⭐** | Super Late → **1.74 ⭐**
-- Remote northern states (AM, RO, AP) surprisingly have **low** late rates
+- Remote northern states (Amazonas, Rondônia, Amapá) surprisingly have **low** late rates
 - The delivery problem is **regional, not national**
 
 ---
 
 ## F. Tech Stack
 
-- **Python** — Pandas, NumPy, Plotly, Seaborn, Matplotlib
-- **Google Colab** — Cloud notebook environment
-- **Google Looker Studio** — Public interactive dashboard
+- **Python** — Pandas, NumPy, Plotly, Folium, Seaborn
+- **Quarto** — Notebook rendering to HTML
+- **Google Looker Studio** — Interactive dashboard
+- **Folium + GeoJSON** — Interactive Brazil choropleth map
 - **Dataset** — [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) via Kaggle
 
 ---
